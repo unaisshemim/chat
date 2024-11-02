@@ -1,0 +1,10 @@
+[[pages]]
+path = "home.py"
+name = "Enter Your Details"
+icon = ":material/home:"
+
+
+[[pages]]
+path = "chat.py"
+name = "Chat With Ai"
+icon = ":material/history:"

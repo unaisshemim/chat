@@ -1,10 +1,7 @@
 from openai import OpenAI
 import streamlit as st
-from dotenv import load_dotenv
-import os 
 
-def configure():
-    load_dotenv()
+
 
 
 def main():
@@ -14,7 +11,7 @@ def main():
         response = st.session_state['response']
         print(st.session_state['response'])
 
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
     if "openai_model" not in st.session_state:
         st.session_state["openai_model"] = "gpt-3.5-turbo"
